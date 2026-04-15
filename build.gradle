@@ -35,7 +35,7 @@ subprojects {
 		mavenCentral()
 	}
 
-	if (name ==~ /io.openems.(common|core|edge|oem|shared|wrapper).*/) {
+	if (name ==~ /io.openems.(common|core|edge|oem|shared|wrapper).*/ || name ==~ /io.mec.edge.*/) {
 		ext.isEdge = true
 	}
 

@@ -1,0 +1,43 @@
+services:
+  openems-edge:
+    build:
+      context: ../../../
+      dockerfile: tools/docker/mec-edge/Dockerfile
+    image: mec-intelligence/edge:latest
+    container_name: mec_edge
+    hostname: mec-edge
+    restart: unless-stopped
+    environment:
+      - IEX_USER=${IEX_USER:-}
+      - IEX_PASS=${IEX_PASS:-}
+    volumes:
+      - mec-edge-conf:/var/opt/openems/config:rw
+      - mec-edge-data:/var/opt/openems/data:rw
+      # Optional: override tariff YAML at runtime
+      # - ./tariff:/etc/mec/tariff:ro
+    ports:
+      - 8080:8080   # Apache Felix web console
+      - 8085:8085   # UI WebSocket
+
+  openems-ui:
+    image: openems/ui-edge:latest
+    container_name: mec_ui
+    hostname: mec-ui
+    restart: unless-stopped
+    volumes:
+      - mec-ui-conf:/etc/nginx:rw
+      - mec-ui-log:/var/log/nginx:rw
+    environment:
+      - WEBSOCKET_HOST=openems-edge
+      - WEBSOCKET_PORT=8085
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - openems-edge
+
+volumes:
+  mec-edge-conf:
+  mec-edge-data:
+  mec-ui-conf:
+  mec-ui-log:
