@@ -1,0 +1,53 @@
+# Fly.io deployment for MEC Intelligence Edge
+# Deploy with: fly deploy
+# First time:  fly launch --no-deploy, then fly deploy
+
+app = "mec-intelligence-edge"
+primary_region = "bom"   # Mumbai — closest to Indian C&I sites
+
+[build]
+  image = "ghcr.io/ghanishtaggarwal/mec-edge:latest"
+
+[env]
+  # IEX credentials — set via: fly secrets set IEX_USER=xxx IEX_PASS=yyy
+  IEX_USER = ""
+  IEX_PASS = ""
+
+[[services]]
+  internal_port = 8085
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 443
+    handlers = ["tls", "http"]
+
+  [[services.ports]]
+    port = 80
+    handlers = ["http"]
+
+  [services.http_checks]
+    interval = "30s"
+    timeout = "10s"
+    grace_period = "60s"
+    path = "/"
+
+# Felix web console (restrict to Fly private network in prod)
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = 8080
+
+[mounts]
+  source = "mec_edge_config"
+  destination = "/var/opt/openems/config"
+
+[mounts]
+  source = "mec_edge_data"
+  destination = "/var/opt/openems/data"
+
+[[vm]]
+  memory = "2gb"
+  cpu_kind = "shared"
+  cpus = 2
