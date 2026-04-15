@@ -1,0 +1,22 @@
+Bundle-Name: MEC Edge Bridge IEX
+Bundle-Vendor: MEC Intelligence Pvt Ltd
+Bundle-License: PROPRIETARY
+Bundle-Version: 0.1.0.${tstamp}
+Bundle-Description: Polls IEX RTM market clearing price every 15 minutes via OkHttp3 \
+    and exposes it as an OpenEMS channel. Implements TimeOfUseTariff so the \
+    Energy Optimizer can use live IEX prices for arbitrage decisions.
+
+-buildpath: \
+	${buildpath},\
+	io.openems.common,\
+	io.openems.edge.common,\
+	io.openems.edge.timeofusetariff.api,\
+	com.squareup.okhttp3,\
+	com.squareup.okio,\
+
+-testpath: \
+	${testpath},\
+	io.openems.common,\
+	io.openems.edge.common,\
+	io.openems.edge.timeofusetariff.api,\
+	org.jetbrains.kotlin.osgi-bundle,\

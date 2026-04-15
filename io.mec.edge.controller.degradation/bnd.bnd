@@ -1,0 +1,21 @@
+Bundle-Name: MEC Edge Controller Degradation
+Bundle-Vendor: MEC Intelligence Pvt Ltd
+Bundle-License: PROPRIETARY
+Bundle-Version: 0.1.0.${tstamp}
+Bundle-Description: Real-time LFP battery SoH model (Arrhenius + cycle aging) \
+    and marginal degradation cost per kWh dispatched.
+
+-buildpath: \
+	${buildpath},\
+	io.openems.common,\
+	io.openems.edge.common,\
+	io.openems.edge.controller.api,\
+	io.openems.edge.battery.api,\
+	org.yaml.snakeyaml,\
+
+-testpath: \
+	${testpath},\
+	io.openems.common,\
+	io.openems.edge.common,\
+	io.openems.edge.controller.api,\
+	io.openems.edge.battery.api,\

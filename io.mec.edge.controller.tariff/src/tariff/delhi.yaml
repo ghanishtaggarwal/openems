@@ -1,0 +1,25 @@
+# TPDDL (Tata Power Delhi Distribution Ltd.) — HT Large Industrial
+discom: TPDDL
+fuel_adj_component: 0.45
+power_factor_penalty_threshold: 0.90
+tou_slots:
+  - from: "23:00"
+    to: "06:00"
+    rate_kwh: 5.70
+    demand_charge_kva: 310.0
+  - from: "06:00"
+    to: "09:00"
+    rate_kwh: 7.55
+    demand_charge_kva: 370.0
+  - from: "09:00"
+    to: "17:00"
+    rate_kwh: 8.40
+    demand_charge_kva: 410.0
+  - from: "17:00"
+    to: "21:00"
+    rate_kwh: 10.20
+    demand_charge_kva: 520.0
+  - from: "21:00"
+    to: "23:00"
+    rate_kwh: 7.55
+    demand_charge_kva: 370.0

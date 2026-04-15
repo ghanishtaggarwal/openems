@@ -1,0 +1,21 @@
+Bundle-Name: MEC Edge Controller Load Intelligence
+Bundle-Vendor: MEC Intelligence Pvt Ltd
+Bundle-License: PROPRIETARY
+Bundle-Version: 0.1.0.${tstamp}
+Bundle-Description: CT-sensor load classification (CRITICAL/NON_CRITICAL) and \
+    EMS-controlled load shedding with inrush guard.
+
+-buildpath: \
+	${buildpath},\
+	io.openems.common,\
+	io.openems.edge.common,\
+	io.openems.edge.controller.api,\
+	io.openems.edge.battery.api,\
+	org.yaml.snakeyaml,\
+
+-testpath: \
+	${testpath},\
+	io.openems.common,\
+	io.openems.edge.common,\
+	io.openems.edge.controller.api,\
+	io.openems.edge.battery.api,\

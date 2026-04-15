@@ -1,0 +1,25 @@
+Bundle-Name: MEC Edge Controller Tariff
+Bundle-Vendor: MEC Intelligence Pvt Ltd
+Bundle-License: PROPRIETARY
+Bundle-Version: 0.1.0.${tstamp}
+Bundle-Description: Indian DISCOM ToD tariff engine. Implements TimeOfUseTariff and \
+    publishes a real-time INR/kWh signal. Bundled configs: PSPCL, MSEDCL, BESCOM, TPDDL.
+
+-includeresource: \
+	tariff/=src/tariff/
+
+-buildpath: \
+	${buildpath},\
+	io.openems.common,\
+	io.openems.edge.common,\
+	io.openems.edge.controller.api,\
+	io.openems.edge.timeofusetariff.api,\
+	io.openems.edge.meter.api,\
+	org.yaml.snakeyaml,\
+
+-testpath: \
+	${testpath},\
+	io.openems.common,\
+	io.openems.edge.common,\
+	io.openems.edge.controller.api,\
+	io.openems.edge.timeofusetariff.api,\

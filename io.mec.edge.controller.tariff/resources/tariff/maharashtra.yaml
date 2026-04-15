@@ -1,0 +1,25 @@
+# MSEDCL (Maharashtra State Electricity Distribution Co.) — HT-II Industrial
+discom: MSEDCL
+fuel_adj_component: 0.38
+power_factor_penalty_threshold: 0.90
+tou_slots:
+  - from: "22:00"
+    to: "06:00"
+    rate_kwh: 5.50
+    demand_charge_kva: 300.0
+  - from: "06:00"
+    to: "09:00"
+    rate_kwh: 7.40
+    demand_charge_kva: 360.0
+  - from: "09:00"
+    to: "12:00"
+    rate_kwh: 9.20
+    demand_charge_kva: 480.0
+  - from: "12:00"
+    to: "18:00"
+    rate_kwh: 7.40
+    demand_charge_kva: 360.0
+  - from: "18:00"
+    to: "22:00"
+    rate_kwh: 9.80
+    demand_charge_kva: 500.0

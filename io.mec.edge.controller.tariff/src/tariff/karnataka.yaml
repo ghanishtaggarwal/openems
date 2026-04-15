@@ -1,0 +1,25 @@
+# BESCOM (Bangalore Electricity Supply Company) — HT-2A Industrial
+discom: BESCOM
+fuel_adj_component: 0.30
+power_factor_penalty_threshold: 0.85
+tou_slots:
+  - from: "22:00"
+    to: "06:00"
+    rate_kwh: 5.35
+    demand_charge_kva: 290.0
+  - from: "06:00"
+    to: "10:00"
+    rate_kwh: 7.10
+    demand_charge_kva: 340.0
+  - from: "10:00"
+    to: "14:00"
+    rate_kwh: 8.85
+    demand_charge_kva: 430.0
+  - from: "14:00"
+    to: "18:00"
+    rate_kwh: 7.10
+    demand_charge_kva: 340.0
+  - from: "18:00"
+    to: "22:00"
+    rate_kwh: 9.30
+    demand_charge_kva: 460.0

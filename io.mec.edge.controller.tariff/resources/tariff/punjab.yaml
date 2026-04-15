@@ -1,0 +1,22 @@
+# PSPCL (Punjab State Power Corporation Limited) — HT Industrial ToD
+# FY 2024-25. Verify against latest PSPCL tariff order before deployment.
+discom: PSPCL
+fuel_adj_component: 0.42
+power_factor_penalty_threshold: 0.90
+tou_slots:
+  - from: "22:00"
+    to: "06:00"
+    rate_kwh: 5.85
+    demand_charge_kva: 280.0
+  - from: "06:00"
+    to: "09:00"
+    rate_kwh: 7.20
+    demand_charge_kva: 350.0
+  - from: "09:00"
+    to: "18:00"
+    rate_kwh: 8.65
+    demand_charge_kva: 450.0
+  - from: "18:00"
+    to: "22:00"
+    rate_kwh: 9.10
+    demand_charge_kva: 475.0
