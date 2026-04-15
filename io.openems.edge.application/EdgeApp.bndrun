@@ -218,6 +218,10 @@
 	bnd.identity;id='io.openems.edge.timeofusetariff.rabotcharge',\
 	bnd.identity;id='io.openems.edge.timeofusetariff.swisspower',\
 	bnd.identity;id='io.openems.edge.timeofusetariff.tibber',\
+	bnd.identity;id='io.mec.edge.bridge.iex',\
+	bnd.identity;id='io.mec.edge.controller.degradation',\
+	bnd.identity;id='io.mec.edge.controller.loadintelligence',\
+	bnd.identity;id='io.mec.edge.controller.tariff',\
 	bnd.identity;id='io.openems.edge.victron',\
 	bnd.identity;id='io.openems.edge.weather.openmeteo',\
 
@@ -432,6 +436,10 @@
 	io.openems.edge.timeofusetariff.rabotcharge;version=snapshot,\
 	io.openems.edge.timeofusetariff.swisspower;version=snapshot,\
 	io.openems.edge.timeofusetariff.tibber;version=snapshot,\
+	io.mec.edge.bridge.iex;version=snapshot,\
+	io.mec.edge.controller.degradation;version=snapshot,\
+	io.mec.edge.controller.loadintelligence;version=snapshot,\
+	io.mec.edge.controller.tariff;version=snapshot,\
 	io.openems.edge.victron;version=snapshot,\
 	io.openems.edge.weather.api;version=snapshot,\
 	io.openems.edge.weather.openmeteo;version=snapshot,\
